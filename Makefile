@@ -2,10 +2,10 @@ BASEDIR := $(CURDIR)
 
 MAKEFLAGS := --no-print-directory
 
-COMPONENTS-desktop	?= awesome git 
-COMPONENTS-laptop	?= awesome wicd
+COMPONENTS-desktop	?= awesome xsession git ssh
+COMPONENTS-laptop	?= awesome xsession git ssh
 COMPONENTS-public	?= awesome
-COMPONENTS-all		?= awesome git wicd
+COMPONENTS-all		?= awesome xsession git ssh
 
 
 
