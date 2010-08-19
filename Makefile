@@ -5,7 +5,7 @@ MAKEFLAGS := --no-print-directory
 COMPONENTS-desktop	?= awesome xsession git ssh
 COMPONENTS-laptop	?= awesome xsession git ssh
 COMPONENTS-public	?= awesome
-COMPONENTS-all		?= awesome xsession git ssh
+COMPONENTS-all		?= awesome xsession git ssh irssi
 
 
 
