@@ -10,6 +10,8 @@ normd = $1
 norms = $(subst $(DESTPATH),$(CURDIR)/,$1)
 DESTFILES := $(patsubst %,$(DESTPATH)%,$(FILES))
 
+.PHONY: $(DESTFILES) $(FILES)
+
 $(DESTFILES): $(FILES)
 	@_d=$(call normd,$@); \
 	_s=$(call norms,$@); \
@@ -27,9 +29,5 @@ $(DESTFILES): $(FILES)
 	else \
 		echo "symlink"; \
 	fi
-
-check: $(DESTFILES)
-	@echo "Checking commenced. Run git status to see if there are"
-	@echo "any .local-diff files."
 
 
