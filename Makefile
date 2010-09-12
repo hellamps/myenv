@@ -33,3 +33,7 @@ install-%:
 	@for c in $(COMPONENTS-$*); do \
 		$(MAKE) iinstall-component-$$c; \
 	done
+
+test:
+	test := foreach( val,"$(value .VARIABLES)",  $val = $(value val))
+	@echo $test
