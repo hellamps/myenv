@@ -34,7 +34,7 @@ iinstall-component-%:
 	@$(MAKE) -C $* BASEDIR=$(BASEDIR) DO_INSTALL=1; \
 
 install-%:
-	@for c in $(COMPONENTS_$*); do \
+	@for c in $(TARGET_$*); do \
 		$(MAKE) iinstall-component-$$c; \
 	done
 
