@@ -38,3 +38,5 @@ install-%:
 		$(MAKE) iinstall-component-$$c; \
 	done
 
+clean:
+	@find . -name "*.local-diff" -exec rm -rf {} \;
